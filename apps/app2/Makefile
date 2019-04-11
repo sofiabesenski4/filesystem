@@ -1,4 +1,3 @@
 
-
 file_make:
-	gcc -o main2 main2.c file.c
+	gcc -pedantic-errors -std=gnu11 -o main2 main2.c file.c

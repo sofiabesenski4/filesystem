@@ -1,6 +1,7 @@
 Running tests using the file system: stage 1
 testing stage 1: init vdisk
-00000000  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
+00000000  00 00 00 00 00 10 00 00  00 01 00 00 00 00 00 00  |................|
+00000010  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
 *
 00000200  00 00 fc ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
 00000210  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
@@ -24,7 +25,8 @@ for the root directory and the root directory's inode
 
 testing stage 2: create directory
 Running tests using the file system: stage 2
-00000000  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
+00000000  00 00 00 00 00 10 00 00  00 01 00 00 00 00 00 00  |................|
+00000010  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
 *
 00000200  00 00 f0 ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
 00000210  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
@@ -58,7 +60,8 @@ Now we created a directory which is stored in the datablock 16, with the inode i
 
 testing stage 3: upload file
 Running tests using the file system: stage 3
-00000000  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
+00000000  00 00 00 00 00 10 00 00  00 01 00 00 00 00 00 00  |................|
+00000010  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
 *
 00000200  00 00 00 ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
 00000210  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
@@ -187,7 +190,8 @@ this testfile occupies 3 blocks in memory, an the block addresses are visible in
 
 testing stage 4: upload large file
 Running tests using the file system: stage 4
-00000000  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
+00000000  00 00 00 00 00 10 00 00  00 01 00 00 00 00 00 00  |................|
+00000010  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
 *
 00000200  00 00 00 00 00 80 ff ff  ff ff ff ff ff ff ff ff  |................|
 00000210  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|

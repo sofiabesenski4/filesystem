@@ -2,7 +2,8 @@ Testing app 2: Running tests using the file system: stage 1
 testing2 stage 1: download small file
 
 
-00000000  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
+00000000  00 00 00 00 00 10 00 00  00 01 00 00 00 00 00 00  |................|
+00000010  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
 *
 00000200  00 00 00 00 00 80 ff ff  ff ff ff ff ff ff ff ff  |................|
 00000210  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
@@ -791,7 +792,8 @@ now the smalltestfile has been downloaded from the filesystem, into the app2 dir
 Testing app 2: Running tests using the file system: stage 2
 testing2 stage 2: download large file
 
-00000000  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
+00000000  00 00 00 00 00 10 00 00  00 01 00 00 00 00 00 00  |................|
+00000010  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
 *
 00000200  00 00 00 00 00 80 ff ff  ff ff ff ff ff ff ff ff  |................|
 00000210  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
@@ -1580,7 +1582,8 @@ testing2 stage 3: delete smalltestfile
 
 Testing app 2: Running tests using the file system: stage 3
 removing the small test file
-00000000  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
+00000000  00 00 00 00 00 10 00 00  00 01 00 00 00 00 00 00  |................|
+00000010  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
 *
 00000200  00 00 f0 00 00 80 ff ff  ff ff ff ff ff ff ff ff  |................|
 00000210  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
@@ -2274,7 +2277,8 @@ changes are reflected in the free block vector, as well as the inode_map
 testing2 stage 3: delete largetestfile
 Testing app 2: Running tests using the file system: stage 4
 removing the large test file
-00000000  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
+00000000  00 00 00 00 00 10 00 00  00 01 00 00 00 00 00 00  |................|
+00000010  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
 *
 00000200  00 00 f0 ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
 00000210  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
@@ -2310,7 +2314,8 @@ similar to before, the changes will be reflected in the fbv and the inode_map
 testing2 stage 4: delete testdir1
 Testing app 2: Running tests using the file system: stage 5
 removing the directory /testdir1/ 
-00000000  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
+00000000  00 00 00 00 00 10 00 00  00 01 00 00 00 00 00 00  |................|
+00000010  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
 *
 00000200  00 00 fc ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
 00000210  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|

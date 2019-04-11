@@ -396,7 +396,7 @@ void delete_filepath(FILE* fp, char* filename)
 	//check filetype
 	read_block(fp,file_block_address,file_inode_block);
 	int file_type = ((int*)file_inode_block)[1];
-//	printf("deleteing filepath %s ,filetype=%c before tokenizing stuff\n",filename,(char)file_type);
+//	printf("filetype=%c before tokenizing stuff\n",(char)file_type);
 	
    
    
@@ -537,7 +537,6 @@ void delete_file(FILE* fp, unsigned char file_inode_id)
 	 *set the inode_map[id] = 00
 	 *clear the file's inode block
 	 */
-	// printf("here!!!!!!!!!!!!!!1\n");
 	 char* empty_block_buffer = malloc(BYTES_PER_BLOCK);
 	 memset(empty_block_buffer,0,BYTES_PER_BLOCK);
 	 unsigned short file_inode_block_address = get_inode_address(fp,file_inode_id);
@@ -1102,6 +1101,12 @@ void init_vdisk(FILE* fp){
 	{
 		write_block(fp, index, buffer,BYTES_PER_BLOCK);
 	}
+	memset(buffer,0,BYTES_PER_BLOCK);
+	((unsigned int*)buffer)[1] = 4096;
+	((unsigned int*)buffer)[2] = 256;
+	write_block(fp, 0, buffer, 12);
+	
+	
 	
 	//FREE BLOCK VECTOR: BLOCK #1
 	memset(buffer, 255, BYTES_PER_BLOCK);

@@ -1101,6 +1101,12 @@ void init_vdisk(FILE* fp){
 	{
 		write_block(fp, index, buffer,BYTES_PER_BLOCK);
 	}
+	memset(buffer,0,BYTES_PER_BLOCK);
+	((unsigned int*)buffer)[1] = 4096;
+	((unsigned int*)buffer)[2] = 256;
+	write_block(fp, 0, buffer, 12);
+	
+	
 	
 	//FREE BLOCK VECTOR: BLOCK #1
 	memset(buffer, 255, BYTES_PER_BLOCK);

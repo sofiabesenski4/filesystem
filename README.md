@@ -7,6 +7,12 @@ PIRATE FILE SYSTEM: PFS
 	media and are afraid of copywrite police!
 
 
+TESTING:
+
+to test, go into the apps folder, use the makefile
+
+
+
 Vdisk contents:
 Block 0: super block
 Block 1: free block vector
