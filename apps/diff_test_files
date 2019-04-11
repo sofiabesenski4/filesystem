@@ -1,0 +1,6 @@
+#!/bin/bash
+
+diff app1/smalltestfile app2/downloadedsmalltestfile
+
+diff app1/largetestfile app2/downloadedlargetestfile
+

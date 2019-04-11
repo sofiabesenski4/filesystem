@@ -1,0 +1,43 @@
+#!/bin/bash
+
+./main2  >testlog2.txt
+echo "testing2 stage 1: download small file
+
+">>testlog2.txt
+hexdump -C ../vdisk >> testlog2.txt
+echo "
+" >> testlog2.txt
+echo "now the smalltestfile has been downloaded from the filesystem, into the app2 directory, named smalltestfileout
+
+">>testlog2.txt
+./main2 1 >>testlog2.txt
+echo "testing2 stage 2: download large file
+">>testlog2.txt
+hexdump -C ../vdisk >>testlog2.txt
+echo "now the largetestfile has been downloaded from the filesystem, into the app2 directory, named largetestfileout 
+
+">>testlog2.txt
+
+echo "testing2 stage 3: delete smalltestfile
+
+">>testlog2.txt
+./main2 1 2 >> testlog2.txt
+hexdump -C ../vdisk >> testlog2.txt
+echo "now we have removed the smalltestfile from our file system.
+changes are reflected in the free block vector, as well as the inode_map
+">>testlog2.txt
+
+
+echo "testing2 stage 3: delete largetestfile">>testlog2.txt
+./main2 1 2 3 >> testlog2.txt
+hexdump -C ../vdisk>>testlog2.txt
+echo "now we have removed the large testfile from our file system.
+similar to before, the changes will be reflected in the fbv and the inode_map
+
+">>testlog2.txt
+
+echo "testing2 stage 4: delete testdir1" >> testlog2.txt
+./main2 1 2 3 4 >> testlog2.txt
+hexdump -C ../vdisk>>testlog2.txt
+echo "removing the directory testdir1
+">>testlog2.txt

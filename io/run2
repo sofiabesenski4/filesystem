@@ -1,0 +1,8 @@
+#!/bin/bash
+
+./main2  >testlog2.txt
+echo "testing2 stage 1: download small file">>testlog2.txt
+hexdump -C ../vdisk >> testlog2.txt
+echo "
+" >> testlog2.txt
+
