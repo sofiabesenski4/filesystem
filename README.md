@@ -1,5 +1,5 @@
 LLFS CSC 360 Assignment 3:
-Thomas Besenski
+Sofia Besenski
 V00879481
 
 PIRATE FILE SYSTEM: PFS
